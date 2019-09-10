@@ -1,6 +1,7 @@
 Directions for a paper airplane.
+#
 Take a rectangle shaped paper.
-Fold the paper half vertically.
+##Fold the paper half vertically.
 unfold the paper and fold the top corners into the center line.
 Fold the newly formed top edges into the center line.
 Turn the paper over. Now the side of the paper with no folds should be facing you.
