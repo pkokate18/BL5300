@@ -10,4 +10,4 @@ fold th wings down, to be in alignment with the bottom edge, which is also the c
 let it fly!
 
 ![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](https://www.google.com/search?q=how+to+make+a+paper+airplane&rlz=1C1CHBF_enUS863US863&sxsrf=ACYBGNTc1_6Em9283Q5Z6G28sUHd5iu9jQ:1568079872435&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjZm5rekMXkAhVYFzQIHRWuCiYQ_AUIEygC&biw=1366&bih=657#imgrc=-6-30YIfFzTYVM:)
+Format: ![Alt Text](https://www.primroseschools.com/blog/wp-content/uploads/2017/01/PaperAirplaneDiagram.pdf)
