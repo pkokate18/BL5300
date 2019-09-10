@@ -10,4 +10,4 @@ fold th wings down, to be in alignment with the bottom edge, which is also the c
 let it fly!
 
 ![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](https://www.primroseschools.com/blog/wp-content/uploads/2017/01/PaperAirplaneDiagram.pdf)
+Format: ![Alt Text](https://www.primroseschools.com/blog/wp-content/uploads/2017/01/PaperAirplaneDiagram-1024x535.jpg)
