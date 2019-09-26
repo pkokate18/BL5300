@@ -1,5 +1,9 @@
 grep -n '>' coffee_chloroplastgenome.fasta | wc -l 
 grep -n '>' coffee_chloroplastgenome.fasta > listofproteins_coffeechloroplastgenome.txt
 awk '/^>/ {printf("\n%s\n",$0);next; } { printf("%s",$0);}  END {printf("\n");}' < coffee_chloroplastgenome.fasta > inonelinecoffee_chloroplastgenome.fasta
-grep -n 'photosystem' inonelinecoffee_chloroplastgenome.fasta | wc -l
+grep -n 'photosystem' inonelinecoffee_chloroplastgenome.fasta > photosystemlist.fasta
+grep "subunit" photosystemlist.fasta |wc -l
+
+ALTERNATIVE AND BETTER METHOD
+awk '/photosystem/ && /subunit/' inonelinecoffee_chloroplastgenome.fasta | wc -l
 grep -A1 "ATP synthase CF1 beta subunit" inonelinecoffee_chloroplastgenome.fasta | cat > ATPCF1_inonelinecoffee_chloroplastgenome.fasta
