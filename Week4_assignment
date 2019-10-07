@@ -1,0 +1,16 @@
+conda install entrez-direct (otherwise efectch doesnt work)
+wget https://raw.githubusercontent.com/stechtmann/BL4300-5300/master/scripts/genbank_to_fasta.py
+pip install --user biopython
+python genbank_to_fasta.py C.hydrogenoformans.gbk C.hydrogenoformans.fasta
+efetch -db=nucleotide -id=CP000141.1 -format=fasta> C.hydrogenoformans.fasta
+bowtie2-build C.hydrogenoformans.fasta C.hydroZ2901_indexed
+Link for R1 - gdown.pl https://drive.google.com/file/d/1PWWO5wVRRThLBXXEZjyWZHIb9udVcnCS/edit C.ferri_R1.fastq
+Link for R2 - gdown.pl https://drive.google.com/file/d/1mZFvpSIctuBihkOlQX9vhrkxng3cRmvK/edit C.ferri_R2.fastq
+gzip C.ferri_R1.fastq
+gzip C.ferri_R2.fastq
+fastqc C.ferri_R1.fastq.gz
+fastqc C.ferri_R2.fastq.gz
+cutadapt -q 20,20 -a GATCGGAAGAGCGGTTCAGCAGGAATGCCGAGACCGATATCGTATGCCGT -A GATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCG -m 50 --max-n 0 -o C.ferri_R1.cutadapt.fastq -p C.ferri_R2.cutadapt.fastq C.ferri_R1.fastq.gz C.ferri_R2.fastq.gz
+fastqc C.ferri_R1.cutadapt.fastq
+fastqc C.ferri_R2.cutadapt.fastq
+bowtie2 -x C.hydroZ2901_indexed -1 C.ferri_R1.cutadapt.fastq -2 C.ferri_R2.cutadapt.fastq -S Week4_ass.sam
